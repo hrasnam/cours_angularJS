@@ -8,11 +8,11 @@
 </head>
 <body>
     <h1>Name Calculator</h1>
-    <div ng-controller="NameCalculatorController">
+    <div ng-controller="DIController">
        <p>Your name: 
            <input type="text" 
                    ng-model="name"
-                   ng-keyup="displayNumeric();" />
+                   ng-blur="upper();" />
        </p>
        <p>Total character value of the name is: {{totalValue}} {{name}}</p>
     </div>

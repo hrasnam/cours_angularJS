@@ -23,6 +23,17 @@ angular.module('NameCalculator', [])
   }
 
 });
+    
+.controller('DIController', DIController);
 
+DIController.$inject = ['$scope', '$filter'];
+function DIController($scope, $filter) {
+  $scope.name = "Marek";
+
+  $scope.upper = function () {
+    var upCase = $filter('uppercase');
+    $scope.name = upCase($scope.name);
+  };
+}
 
 })();
